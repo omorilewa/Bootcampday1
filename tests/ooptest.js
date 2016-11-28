@@ -28,19 +28,19 @@
     });
 
 
-    it("The Mobile shoud have one sim except its an Iphone", function() {
-      var man  = new Mobile('Sony', 'Truck', 'Iphone');
-      expect(man.numOfWheels).toBe(1);
+    it("The Mobile should be 2 if its not an iphone", function() {
+      var man  = new myApp.Mobile('Sony', 'Truck', 'Samsung');
+      expect(man.numOfSim).to.eql(2);
 ;
     });
 
 
 
     it("The Mobile drive function should return the instance of the Mobile class", function() {
-      var man  = new Mobile('MAN', 'Truck', 'trailer');
-      var chargingMan = man.charge(7);
+      var man  = new myApp.Mobile('Sony');
+      var chargingMan = man.myApp.charge(4);
       expect(chargingMan instanceof Mobile).to.be(true);
-      expect(typeof chargingMan.drive).toBe(typeof (function (){}));
-      expect(man.charge).toBe(chargingMan.charge);
+      
+      expect(chargingMan).to.eql('phone is charging for 4 hours');
     });
 })

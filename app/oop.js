@@ -7,12 +7,12 @@ Mobile: function(name,model,numofSim) {
   this.numOfSim = (this.type === "Iphone") ? 1 : 2;
   
 },
-Mobile.prototype.charge = function(hours) {
+//Mobile.prototype.charge = function(hours) {
   
-  return "phone is charging for"+ hours +" hours";
-},
+//  return "phone is charging for"+ hours +" hours";
+//},
 
 
-}
+//}
 }
  

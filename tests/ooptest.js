@@ -11,20 +11,20 @@
 
     it("The Mobile should be a type of `object`, and an instance of the `Mobile` class", function() {
       var Samsung = new myApp.Mobile('Samsung');
-      expect(typeof Samsung).toEqual(typeof {});
-      expect(Samsung instanceof Mobile).toBeTruthy();
+      
+      expect(Samsung instanceof myApp.Mobile).to.be.true;
     });
 
     it("The Mobile should be called 'General' if no name is passed as a parameter", function() {
       var gm = new myApp.Mobile();
-      expect(gm.name).toEqual('General');
-      expect(gm.model).toBe('GM');
+      expect(gm.name).to.eql('Phone');
+      expect(gm.model).to.eql('GM');
     });
 
     it("The Mobile name and model should be a property of the Mobile", function() {
-      var Infinix  = new Mobile('Infinix', 'Hot Note');
-      expect(Infinix.name).toBe('Infinix');
-      expect(Infinix.model).toBe('Hot Note');
+      var Infinix  = new myApp.Mobile('Infinix', 'Hot Note');
+      expect(Infinix.name).to.eql('Infinix');
+      expect(Infinix.model).to.eql('Hot Note');
     });
 
 
